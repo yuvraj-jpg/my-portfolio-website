@@ -1,38 +1,675 @@
-.App {
-  text-align: center;
+@media only screen and (min-device-width: 800px) and (max-device-width: 2220px){
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Fredoka+One&family=Roboto:ital,wght@0,300;0,400;1,400;1,900&display=swap');
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  nav{
+  position:fixed;
+  width: 70vw;
+  height: 6vh;
+  background-color: white;
+  margin: 0 auto; 
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+nav .logo{
+  display: inline;
+  line-height:7vh;
+}
+nav .logo a{
+  font-size: 1.5rem;
+  color: blueviolet;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul{
+  float: right;
+
+}
+nav ul li{
+  display: inline-block;
+  margin-left: 1vw;
+  line-height: 6vh;
+}
+nav ul li a{
+  font-size: 1rem;
+  color:black;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s ease; 
+} 
+
+nav ul li a:hover{
+  color: blueviolet;
+  transition: 0.5s;
+}
+nav ul li a::before{
+  content: '';
+  position: absolute;
+  background-color: blueviolet;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.9s ease;
+}
+nav ul li a:hover:before{
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.checkbtn{
+  display: none;}
+#check{
+  display: none;
+}
+
+
+/* home page */
+
+
+.home{
+  position: relative;
+  top: 6vh;
+      width: 70vw;
+      height: 42vh;
+      margin: 0 auto; 
+      left: 0;
+      right: 0;
+      display: flex;
+      
+}
+.lefthome{
+      flex: 35vw;
+}
+.home .lefthome h1{
+  margin-left: 2vw;
+  margin-top: 10vh;
+  font-size: 2.2rem;
+  color: black;
+}
+span{
+  color: rgb(165, 74, 207);
+  font-size: 2.2rem;
+}
+.home .lefthome p{
+  margin-left: 2vw;
+  font-size: 1.3rem;
+  color: black;
+}
+.home .lefthome button{
+  margin-left: 2vw;
+  border: 1px solid rebeccapurple;
+  border-radius:20px 50px 20px 50px;
+  padding: 15px 7px;
+  
+}
+.home .lefthome button a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.home .lefthome button:hover{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.righthome{
+  flex: 35vw;
+}
+.righthome img{
+  height:40vh;
+  width: 30vw;
+}
+.media{
+  position: relative;
+  top: 6vh;
+      width: 70vw;
+      height: 10vh;
+      margin:auto;
+      left: 0;
+      right: 0;
+      
+}
+.media ul{
+  margin-left: 20vw;
+   
+}
+.media ul li{
+  display:inline-block;
+  margin-left: 2vw;
+}
+.media ul li a{
+ color: rgb(26, 16, 36);
+  font-size: 3.5rem;
+}
+/* projects */
+
+
+.project{
+      position: relative;
+      top: 6vh;
+      margin: 0 auto; 
+      left: 0;
+      right: 0; 
+      width: 70vw;
+      height: auto;
+      /* justify-content: center; */
+}
+hr{
+  width:33vw;
+  background-color: rgb(71, 42, 99);
+  height: 7px;
+  border-radius: 10px;
+  
+}
+h1{
+  font-size: 2.5rem;
+  color: blueviolet;
+  text-transform: capitalize;
+}
+.one{
+  display: flex;
+  padding-bottom: 3vh;
+}
+.left{
+  flex: 33vw;
+}
+.left h2{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.left p{
+  width:32vw;
+  font-size:1.2rem;
+}
+.left li{
+  display: inline-block;
+margin-left: 1vw;
+  border: 2px solid black;
+  border-radius: 10px 20px 10px 20px;
+  padding: 1vh 1vw;
+}
+.left li a{
+  color: blueviolet;
+  text-decoration: none;
+}
+.left li{
+  color: blueviolet;
+  text-decoration: none;
+}
+.right{
+  flex: 37vw;
+}
+.right img{
+  border-radius: 6px;
+  width:35vw;
+  height: 35vh;
+}
+.two{
+  display:flex;
+  padding-bottom: 3vh;
+}
+.three{
+  display:flex;
+  padding-bottom: 3vh;
+}
+/* skill */
+
+
+.skill{
+  position: relative;
+  top: 6vh;
+      width: 70vw;
+      height: 33vh;
+      margin: 0 auto; 
+      left: 0;
+      right: 0;
+}
+.skillone{
+  margin-top:2vh ;
+  display: flex;
+}
+.skillleft{
+  flex: 25vw;
+  height: 12vh;
+}
+.skillright{
+  flex: 45vw;
+  height: 12vh;
+}
+.skillright ul{
+  letter-spacing: 2vw;
+}
+.skillright ul li{
+  font-size: 5rem;
+  display: inline-block;
+}
+.skilltwo{
+  display:flex;
+  height: 20vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* contacts */
+
+
+.contact{
+  position: relative;
+  top: 6vh;
+      width: 70vw;
+      height: auto;
+      margin: 0 auto; 
+      left: 0;
+      right: 0;
+}
+.contact h4{
+  text-align: center;
+  font-size: 30px;
+}
+.contactone{
+  display: flex;
+}
+.contactone .socialleft{
+  flex: 35vw;
+}
+.contactone .socialleft ol{
+  margin-left: 1vw;
+  margin-top: 3vh;
+}
+.contactone .socialleft  ol li{
+  margin-top: 1vh;
+  display: inline-block;
+  font-size:1.3rem;
+}
+
+.contactone .socialleft ol li a i{
+  color: blueviolet;
+}.contactone .socialleft ol li a {
+  color: blueviolet;
+  text-decoration: none;
+
+}
+.socialright{
+  flex: 35vw;
+}
+
+.contactone .socialright ul{
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+.contactone .socialright  ul li{
+  display: inline-block;
+  margin-left: 2vw;
+}
+.contactone .socialright ul li a{
+  color: blueviolet;
+  font-size: 3.5rem;
+}
+
+
+.contact p{
+  text-align: center;
+  font-size: 1rem;
+}
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Fredoka+One&family=Roboto:ital,wght@0,300;0,400;1,400;1,900&display=swap');
+  *{
+      margin: 0;padding: 0;
+      box-sizing: border-box;
+      font-family: 'DM Sans', sans-serif;
+  
   }
-  to {
-    transform: rotate(360deg);
-  }
+nav{
+  width: 100vw;
+  height: 6vh;
+  background-color: white;
+  position:fixed;
+  top: 0;
+  z-index: 1;
+}
+nav .logo{
+   margin-left: 6vw;
+}
+nav .logo a{
+  font-size: 1.5rem;
+  line-height: 6vh;
+ 
+  text-decoration: none;
+  color: blueviolet;
+  text-transform: capitalize;margin-left: 2vw;
+}
+.checkbtn{
+  color: black;
+  float: right;
+  line-height: 6vh;
+  margin-right: 5vw;
+  cursor: pointer;
+}
+#check{
+  display: none;
+}
+.checkbtn{
+  display: block;
+}
+nav ul{
+  position: fixed;
+  width: 100vw;
+  height: 40vh;
+  background: black;
+  top: 6vh;
+  left: 100vw;
+  transition: all 0.9s;
+  opacity: 0.6;
+  border-radius: 0 0px 5px 5px;
+
+}
+nav ul li{
+  display: block;
+  line-height: 10vh;
+  letter-spacing: 2px;
+  margin-left: 12vw;
+}
+nav ul li a{
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  transition: 0.9s ease;   
+
+}
+#check:checked~ul{
+  left: 0;
+}
+
+
+
+/* home section  */
+
+.home{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 6vh;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background-size: cover;
+}
+
+.lefthome{
+  flex: 100vw;
+  text-align: left;
+}
+
+.home .lefthome h1{
+  margin-left: 10vw;
+  margin-top: 4vh;
+  font-size: 1.3rem;
+  color: black;
+}
+span{
+  color: rgb(165, 74, 207);
+  font-size: 29px;
+}
+.home .lefthome p{
+  margin-left: 10vw;
+  font-size: 1.2rem;
+  color: black;
+}
+.home .lefthome button{
+  border: 1px solid black;
+  border-radius: 10px 20px 10px 20px;
+  padding: 10px  10px;
+  margin-left: 10vw;
+}
+.home .lefthome button a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.home .lefthome button:hover{
+  color: pink;
+}
+
+.righthome{
+  flex: 100vw;
+}
+.righthome img{
+  margin-left:10vw;
+  width: 80vw;
+  height: 32vh;
+}
+.media{
+  position: relative;
+  top: 6vh;
+      width: 70vw;
+      height: 10vh;
+      margin:auto;
+      left: 0;
+      right: 0;
+      
+}
+.media ul{
+  margin-left: 5vw;
+   
+}
+.media ul li{
+  display:inline-block;
+  margin-left: 3vw;
+}
+.media ul li a{
+ color: rgb(26, 16, 36);
+  font-size: 2rem;
+}
+/* projects */
+
+.project{
+  position: relative;
+  top: 6vh;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+hr{
+  width: 50vw;
+  background-color:blueviolet;
+  height: 1vh;
+  border-radius: 10px;
+  margin-left: 10vw;
+  margin-top: 2vh;
+}
+
+h1{
+  margin-left: 10vw;
+  font-size: 35px;
+  color: blueviolet;
+  text-transform: capitalize;
+}
+.one{
+  display: flex;
+  flex-direction: column-reverse;
+  height: 80vh;
+}
+.right{
+  flex: 100vw;
+}
+.right img{
+  margin-left: 10vw;
+  width: 80vw;
+  height: 35vh;
+}
+.left{
+  flex: 100vw;
+}
+.left h2{
+  margin-left:10vw;
+  text-transform: capitalize;
+}
+.left p{
+  width: 80vw;
+  text-align: justify;
+  margin-left: 10vw;
+}
+.left ul{
+  margin-left: 10vw;
+}
+.left li{
+  display: inline-block;
+  background-color:rgb(141, 141, 212) ;
+  padding: 5px 10px;
+  margin-left: 9px;
+}
+.left ul li a{
+  text-decoration:none;
+}
+
+.two{
+  display:flex;
+  flex-direction: column-reverse;
+  height: 80vh;
+
+}
+.three{
+  display:flex; 
+  flex-direction: column-reverse;
+  height: 80vh;
+  margin-bottom: 10vh;
+}
+/* skill */
+
+
+.skill{
+  border: 2px solid white;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+}
+.skillone{
+  margin-top: 20px;
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
+}
+.skillleft{
+  flex: 100%;
+  text-align: center;
+}
+.skillleft h2{
+  margin-bottom: 10px;
+}
+.skillright{
+   text-align: center;
+  flex: 100%;
+}
+.skillright ul{
+  letter-spacing: 10px;
+}
+.skillright ul li{
+  font-size: 70px;
+  display: inline-block;
+}
+.skilltwo{
+  display: flex;
+  height: 20vh;
+  flex-direction: column;
+}
+/* contacts */
+.contact{
+
+  border: 2px solid white;
+  position: relative;
+  background-color: white;
+  width: 100vw;
+  height:40vh;
+  background-size: cover;
+}
+
+.contactone{
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+}
+.contactone .socialleft{
+  flex: 100%;
+  margin-top: 18px;
+}
+.contactone .socialleft ol{
+  margin-left: 10vw;
+}
+.contactone .socialleft  ol li{
+  display: inline-block;
+  font-size: 20px;
+}
+.contactone .socialleft ol li a i{
+  color: blue;
+}.contactone .socialleft ol li a {
+  color: black;
+  margin-left: 30px;
+  text-decoration: none;
+}
+.contactone .socialright ul{
+  margin-left: 20vw;
+}
+.contactone .socialright  ul li{
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.contactone .socialright ul li a{
+  letter-spacing: 10px;
+}
+
+.contact p{
+  text-align: center;
+}
+.socialright{
+  flex: 100%;
+}
+#form {
+  position: relative;
+  width: 100%;
+}
+
+input {
+    margin-top: 1%;
+    margin-left: 6%;
+  width:  88%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+}
+textarea {
+  margin-left: 6%;
+  width: 88%;
+  max-width: 88%;
+  height:  88%;
+  max-height:  88%;
+  padding: 15px; 
+}
+
+#submit {
+    
+  margin-left: 6%;
+  width: 88%;
+  cursor: pointer;
+  border: solid 1px #b3aca7;
+}
+
 }
